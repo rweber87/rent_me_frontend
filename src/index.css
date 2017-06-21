@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("https://img0.etsystatic.com/041/0/6304542/il_fullxfull.653643912_f0sn.jpg");
+  height: 10000px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login-form:focus, #filter:focus {
+   border-bottom: 1px solid #2196F3;
+   box-shadow: 0 1px 0 0 #2196F3;
+ }
+
+ #logo {
+    cursor: pointer;
+ }
+
+ #login-form {
+ 	padding-top: 100px;
+ }
+
+ #signup-form:focus, #filter:focus {
+   border-bottom: 1px solid #2196F3;
+   box-shadow: 0 1px 0 0 #2196F3;
+ }
+
+ a.collapsible-header{
+  color: black;
+ }
+
+#product-card{
+  height: 184.77px;
+  width: 651.25px;
+}
+
+ #profile-row{
+  padding-top: 100px;
+ }
+
+ #signup-form {
+ 	padding-top: 100px;
+ }
+
+ #product-form:focus, #filter:focus {
+   border-bottom: 1px solid #2196F3;
+   box-shadow: 0 1px 0 0 #2196F3;
+ }
+
+ #review-form:focus, #filter:focus {
+   border-bottom: 1px solid #2196F3;
+   box-shadow: 0 1px 0 0 #2196F3;
+ }
+
+#filter-title {
+	border-bottom: 2px solid grey;
+}
+
+[type="checkbox"]:checked+label:before{
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+.card.horizontal .card-image img {
+ 	padding: 20px;
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+ }
+
+.image-container{
+  height: 100%;
+  text-align: center;
+ }
+
+/*#product-row{
+  padding-top: 100px;
+  background-image: url("https://img0.etsystatic.com/041/0/6304542/il_fullxfull.653643912_f0sn.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}*/
+
+ #product-row {
+ 	padding-top: 100px;
+ }
+
+ .dropdown-content li>a, .dropdown-content li>span {
+ 	color: white;
+ 	background-color: #9e9e9e; 
+ }
+
+.card-title{
+	border-bottom: 2px solid black;
+}
+
+.checkout-text {
+	padding-bottom: 5px;
+}
+
+.half-container{
+  width: 50% !important;
+}
+
+ #card-content {
+ 	position:relative;
+	right:0;
+ }
+
+ .reviews{
+  text-align: left;
+ }
+
+#select:active, #select:hover, #select:focus {
+  outline-color: #2196F3;
+}
