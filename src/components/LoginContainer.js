@@ -6,7 +6,7 @@ function LoginContainer(props) {
 
 	return(
 		<div className='container'>
-			<div className="row">
+			<div className="row card">
 				<LoginForm storage={() => props.storage()} />
 				<div id='form-line'className="col s1">
 				</div>
