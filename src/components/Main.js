@@ -49,7 +49,7 @@ class Main extends Component {
 
   logOut() {
     localStorage.clear()
-    this.props.history.push('/login')  
+    this.props.history.push('/')  
   }
 
   handleSelectBox(e){
@@ -128,7 +128,7 @@ class Main extends Component {
       <div>
         <NavBar state={this.state} history={this.props.history} logout={this.logOut.bind(this)} brand='Temparental' updateProductOnCheckout={this.updateProductOnCheckout.bind(this)}/>
         <Switch>
-          <Route path='/login' render={() => <LoginContainer user={this.state.userId} history={this.props.history} storage={this.setLocalStorage.bind(this)} />} />
+          <Route exact path='/' render={() => <LoginContainer user={this.state.userId} history={this.props.history} storage={this.setLocalStorage.bind(this)} />} />
           <Route exact path='/products' render={() => <AuthedProductsContainer handleSubmit={this.handleSubmit.bind(this)} handleSelectBox={this.handleSelectBox.bind(this)} setStorage={this.setLocalStorage.bind(this)} state={this.state} user={this.state.userId} products={this.state.products}/>}/>
           <Route exact path='/profile' render={() => <AuthedProfileContainer user={this.state.userId} history={this.props.history} products={this.state.products} />} />
         </Switch>

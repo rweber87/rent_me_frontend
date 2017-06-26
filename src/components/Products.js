@@ -40,7 +40,7 @@ class Products extends Component {
 			fetchProducts(this.state.userId)
 		    .then( (products => this.setState({
 		    	products: products.filter((product) => {
-					if(`${product.owner_id}` !== this.state.userId && checkboxes.has(product.category[0].toUpperCase() + product.category.slice(1))){
+					if(`${product.owner_id}` !== this.state.userId && checkboxes.has(product.category[0] + product.category.slice(1))){
 						return product
 					}
 				})
@@ -64,7 +64,7 @@ class Products extends Component {
 	      fetchProducts(this.state.userId)
 	        .then( ((products) => this.setState({
 	          products: products.filter((product) => {
-		          if(`${product.owner_id}` !== this.state.userId && checkboxes.has(product.category[0].toUpperCase() + product.category.slice(1))){
+		          if(`${product.owner_id}` !== this.state.userId && checkboxes.has(product.category[0] + product.category.slice(1))){
 		            return product
 		          }
 	           })
@@ -73,11 +73,12 @@ class Products extends Component {
 	}
 
 	render () {
-		console.log("products page")
-		if(!this.state.products){
-			return <div>Loading...</div>
+		console.log("state of products component", this.state)
+		if(this.state.products.error){
+			return (<div>Loading...</div>)
 		}
-		let products = this.state.products.map( (product,i) => 
+
+		var products = this.state.products.map( product => 
 				<Product state={this.props.state} handleSubmit={this.props.handleSubmit} handleSelectBox={this.props.handleSelectBox} key={product.id} product={product} / >
 			)
 		return (
