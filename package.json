@@ -5,9 +5,7 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "rellax": "^1.0.0"
-  },
-  "devDependencies": {
+    "rellax": "^1.0.0",
     "react-scripts": "1.0.7"
   },
   "scripts": {
