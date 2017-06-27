@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export function logIn(params){
-  return fetch('http://localhost:3000/api/v1/auth', {
+  return fetch('https://immense-castle-60319.herokuapp.com/api/v1/auth', {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -12,7 +12,7 @@ export function logIn(params){
 }
 
 export function signUp(params){
-  return fetch('http://localhost:3000/api/v1/users', {
+  return fetch('https://immense-castle-60319.herokuapp.com/api/v1/users', {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ export function signUp(params){
 }
 
 export function fetchProducts(id) {
-  return fetch('http://localhost:3000/api/v1/products', {
+  return fetch('https://immense-castle-60319.herokuapp.com/api/v1/products', {
     headers: {
         'Authorization': localStorage.getItem('jwt'),
         'userId': id
@@ -32,7 +32,7 @@ export function fetchProducts(id) {
 }
 
 export function fetchUserProducts(id){
-  return fetch(`http://localhost:3000/api/v1/users/${id}/products`, {
+  return fetch(`https://immense-castle-60319.herokuapp.com/api/v1/users/${id}/products`, {
     headers: {
         'Authorization': localStorage.getItem('jwt'),
         'userId': id
@@ -41,7 +41,7 @@ export function fetchUserProducts(id){
 }
 
 export function cartCheckout(params) {
-  return fetch('http://localhost:3000/api/v1/rental_transactions', {
+  return fetch('https://immense-castle-60319.herokuapp.com/api/v1/rental_transactions', {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ export function cartCheckout(params) {
 }
 
 export function getTransactions(id) {
-  return fetch(`http://localhost:3000/api/v1/rental_transactions/${id}`, {
+  return fetch(`https://immense-castle-60319.herokuapp.com/api/v1/rental_transactions/${id}`, {
     headers: {
         'Authorization': localStorage.getItem('jwt'),
         'userId': id
@@ -62,7 +62,7 @@ export function getTransactions(id) {
 }
 
 export function createNewProduct(params){
-  return fetch('http://localhost:3000/api/v1/products', {
+  return fetch('https://immense-castle-60319.herokuapp.com/api/v1/products', {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export function getImageURL(name){
 }
 
 export function editProduct(params){
-  return fetch(`http://localhost:3000/api/v1/products/${params.id}`, {
+  return fetch(`https://immense-castle-60319.herokuapp.com/api/v1/products/${params.id}`, {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ export function editProduct(params){
 }
 
 export function deleteProduct(params){
-  return fetch(`http://localhost:3000/api/v1/products/${params.id}`, {
+  return fetch(`https://immense-castle-60319.herokuapp.com/api/v1/products/${params.id}`, {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export function deleteProduct(params){
 }
 
 export function createReview(params){
-  return fetch('http://localhost:3000/api/v1/reviews/', {
+  return fetch('https://immense-castle-60319.herokuapp.com/api/v1/reviews/', {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
