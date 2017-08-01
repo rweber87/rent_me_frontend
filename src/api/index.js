@@ -1,6 +1,8 @@
 import axios from 'axios'
 
-var baseURL = 'https://immense-castle-60319.herokuapp.com/api/v1'
+// var baseURL = 'https://immense-castle-60319.herokuapp.com/api/v1'
+
+var baseURL = 'http://localhost:3000/api/v1'
 
 export function logIn(params){
   return fetch(baseURL + '/auth', {

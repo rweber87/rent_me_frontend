@@ -24,13 +24,11 @@ class MyProducts extends Component {
 		
 	}
 
-	handleAddProduct(params, e){  
-		e.preventDefault()
+	handleAddProduct(params){  
 		if(params.name === "" || params.description === "" || params.category === "" || params.cost_to_rent === 0){
 			alert("Please fill out all necessary fields")
 			return
 		} else if(params.image_url === "") {
-			debugger
 			var userInput = params.name.split(" ").join("+")
 			fetchJsonp(`https://api.walmartlabs.com/v1/search?query=${userInput}&format=json&apiKey=37jt8ht5een6m23jntubkd85`)
   			.then(res => res.json())

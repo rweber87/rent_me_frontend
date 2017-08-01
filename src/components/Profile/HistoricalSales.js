@@ -19,9 +19,6 @@ class HistoricalSales extends Component {
 			transactions: transactions
 		}))
 	}
-	
-	
-
 
 	render() {
 		if(!this.state){
@@ -29,7 +26,6 @@ class HistoricalSales extends Component {
 					Loading...
 				</div>)
 		}
-		console.log(this.state.transac)
 		var addReview = (params, e) =>  
 						{
 							console.log("handling review", params, e)
@@ -41,7 +37,6 @@ class HistoricalSales extends Component {
 		var transactions = this.state.transactions.map(function(transaction){	
 			var products = transaction.products.map(function(product){
 				var sale = transaction.sales.filter(sale => sale.rental_transaction_id === transaction.id && sale.product_id === product.id)
-				console.log(sale)
 			return(
 					<li className='collection-item avatar'>
 						<img height='150' width='150' src={product.image_url} alt='' className='circle'/>
@@ -59,7 +54,7 @@ class HistoricalSales extends Component {
 			})
 			var createdAt = `Purchased Made On: ${transaction.created_at}` 		 
 			return(
-					<li >
+					<li className='historical-list'>
 				      	<CollapsibleItem header={createdAt} icon='list black'>
 		 	      			<ul className='collection'>
 			      				{products}
