@@ -24,7 +24,8 @@ class ProductForm extends Component{
 	}
 
 	handleSubmit() {
-		var state = this.state
+		this.props.onSubmit(this.state)
+
 		this.setState({
 			name: '',
 			description: '',
@@ -33,7 +34,6 @@ class ProductForm extends Component{
 			category: '',
 			userId: localStorage.id
 		})
-		this.props.onSubmit(state)
 	}
 
 	render(){

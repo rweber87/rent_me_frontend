@@ -32,6 +32,10 @@ body {
   color: black;
  }
 
+ .collapsible.popout>li {
+  background-color: white;
+ }
+
 #product-card{
   height: 184.77px;
   width: 651.25px;
