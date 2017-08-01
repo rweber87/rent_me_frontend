@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "fetch-jsonp": "^1.1.1",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-materialize": "^1.0.3",

@@ -16,6 +16,17 @@ class ProductForm extends Component{
 		}
 	}
 
+	componentWillUnmount() {
+		this.setState({
+			name: '',
+			description: '',
+			cost_to_rent: 0,
+			image_url: '',
+			category: '',
+			userId: localStorage.id,
+		})
+	}
+
 	handleInputChange(props, value) {
 		this.setState({
 			[props]: value

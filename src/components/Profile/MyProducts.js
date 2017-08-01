@@ -30,8 +30,9 @@ class MyProducts extends Component {
 			alert("Please fill out all necessary fields")
 			return
 		} else if(params.image_url === "") {
+			debugger
 			var userInput = params.name.split(" ").join("+")
-			fetchJsonp(`http://api.walmartlabs.com/v1/search?query=${userInput}&format=json&apiKey=37jt8ht5een6m23jntubkd85`)
+			fetchJsonp(`https://api.walmartlabs.com/v1/search?query=${userInput}&format=json&apiKey=37jt8ht5een6m23jntubkd85`)
   			.then(res => res.json())
   			.then(function(data){
   				params.image_url = data.items[0].thumbnailImage
@@ -83,6 +84,7 @@ class MyProducts extends Component {
 	}
 
 	render() {
+		console.log("my products", this.state)
 		if(!this.state){
 			return (<div>
 					Loading...

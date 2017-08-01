@@ -3,6 +3,7 @@ import Product from './Product'
 import CategorySelector from './CategorySelector'
 import { fetchProducts } from '../api'
 
+
 class Products extends Component {
 	constructor(props) {
 		super(props)
