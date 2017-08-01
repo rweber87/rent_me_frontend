@@ -23,7 +23,9 @@ class ProductForm extends Component{
 		})
 	}
 
-	handleSubmit() {
+	handleSubmit(e) {
+		e.preventDefault()
+
 		this.props.onSubmit(this.state)
 
 		this.setState({
@@ -49,7 +51,7 @@ class ProductForm extends Component{
 			 		<h3 id='form-title' className='row'>Add a Product</h3>
 				 	<img alt=''  src={this.state.image_url} className='row' />
 				 	</div>
-				 	<form className='form half-container' onSubmit={() => this.handleSubmit()}>
+				 	<form className='form half-container' onSubmit={(e) => this.handleSubmit(e)}>
 			 			<input id='product-form' className='input-field' placeholder='Name' type='text' onChange={ e => this.handleInputChange('name', e.target.value)}/>
 			 			<input id='product-form' className='input-field' placeholder='Description' type='text' onChange={ e => this.handleInputChange('description', e.target.value)}/>
 			 			<input id='product-form' className='input-field' placeholder='Cost Per Day' type='number' onChange={ e => this.handleInputChange('cost_to_rent', e.target.value)}/>
