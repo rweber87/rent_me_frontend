@@ -25,7 +25,6 @@ class ProductForm extends Component{
 
 	handleSubmit(e) {
 		e.preventDefault()
-
 		this.props.onSubmit(this.state)
 
 		this.setState({
@@ -39,6 +38,7 @@ class ProductForm extends Component{
 	}
 
 	render(){
+
 		return(
 			<Modal		
 			trigger={
@@ -52,10 +52,10 @@ class ProductForm extends Component{
 				 	<img alt=''  src={this.state.image_url} className='row' />
 				 	</div>
 				 	<form className='form half-container' onSubmit={(e) => this.handleSubmit(e)}>
-			 			<input id='product-form' className='input-field' placeholder='Name' type='text' onChange={ e => this.handleInputChange('name', e.target.value)}/>
-			 			<input id='product-form' className='input-field' placeholder='Description' type='text' onChange={ e => this.handleInputChange('description', e.target.value)}/>
-			 			<input id='product-form' className='input-field' placeholder='Cost Per Day' type='number' onChange={ e => this.handleInputChange('cost_to_rent', e.target.value)}/>
-			 			<input id='product-form' className='input-field' placeholder='Image URL (Optional)' type='text' onChange={ e => this.handleInputChange('image_url', e.target.value)}/>
+			 			<input id='product-form' className='input-field' value={this.state.name} placeholder='Name' type='text' onChange={ e => this.handleInputChange('name', e.target.value)}/>
+			 			<input id='product-form' className='input-field' value={this.state.description} placeholder='Description' type='text' onChange={ e => this.handleInputChange('description', e.target.value)}/>
+			 			<input id='product-form' className='input-field' value={this.state.cost_to_rent} placeholder='Cost Per Day' type='number' onChange={ e => this.handleInputChange('cost_to_rent', e.target.value)}/>
+			 			<input id='product-form' className='input-field' value={this.state.image_url} placeholder='Image URL (Optional)' type='text' onChange={ e => this.handleInputChange('image_url', e.target.value)}/>
 			 			<select defaultValue="" id='select' className='browser-default' onChange={ e => this.handleInputChange('category', e.target.value)}>
 					      <option defaultValue="0">Choose Category: </option>
 					      <option value="Recreational">Recreational</option>
